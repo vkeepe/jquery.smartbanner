@@ -24,6 +24,8 @@
             this.type = 'android'
         } else if (UA.match(/Windows NT 6.2/i) != null && UA.match(/Touch/i) !== null) {
             this.type = 'windows'
+        } else if (navigator.userAgent.match(/Windows Phone/i) != null) {
+            this.type = 'windows-phone'
         }
 
         // Don't show banner if device isn't iOS or Android, website is loaded in app or user dismissed banner
@@ -38,6 +40,7 @@
         // Get info from meta data
         var meta = $(this.type == 'android' ? 'meta[name="google-play-app"]' :
             this.type == 'ios' ? 'meta[name="apple-itunes-app"]' :
+            this.type == 'windows-phone' ? 'meta[name="msApplication-ID"]' :
             this.type == 'kindle' ? 'meta[name="kindle-fire-app"]' : 'meta[name="msApplication-ID"]');
         if (meta.length == 0) return
 
@@ -66,7 +69,7 @@
 
       , create: function() {
             var iconURL
-              , link=(this.options.url ? this.options.url : (this.type == 'windows' ? 'ms-windows-store:PDP?PFN=' + this.pfn : (this.type == 'android' ? 'market://details?id=' : (this.type == 'kindle' ? 'amzn://apps/android?asin=' : 'https://itunes.apple.com/' + this.options.appStoreLanguage + '/app/id'))) + this.appId)
+              , link=(this.options.url ? this.options.url : (this.type == 'windows-phone' ? 'http://windowsphone.com/s?appId=' : (this.type == 'windows' ? 'ms-windows-store:PDP?PFN=' + this.pfn : (this.type == 'android' ? 'market://details?id=' : (this.type == 'kindle' ? 'amzn://apps/android?asin=' : 'https://itunes.apple.com/' + this.options.appStoreLanguage + '/app/id')))) + this.appId)
               , price = this.price || this.options.price
               , inStore=price ? price + ' - ' + (this.type == 'android' ? this.options.inGooglePlay : this.type == 'kindle' ? this.options.inAmazonAppStore : this.type == 'ios' ? this.options.inAppStore : this.options.inWindowsStore) : ''
               , gloss=this.options.iconGloss === null ? (this.type=='ios') : this.options.iconGloss
