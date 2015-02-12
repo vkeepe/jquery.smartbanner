@@ -80,6 +80,8 @@
                 link = 'market://details?id=' + this.appId
                 if(this.options.GooglePlayParams)
                   link = link + '&referrer=' + this.options.GooglePlayParams
+              } else if(this.type=='windows-phone') {
+                  link = 'http://windowsphone.com/s?appId=' + this.appId
               }
               else
               link = 'https://itunes.apple.com/' + this.options.appStoreLanguage + '/app/id' + this.appId
