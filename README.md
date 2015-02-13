@@ -55,5 +55,5 @@ brings this feature to older iOS versions, Android devices and for Windows Store
 
 [![Arnold Daniels](https://avatars3.githubusercontent.com/u/100821?v=2&s=64)](https://github.com/jasny)
 [![Thomas De Laet](https://avatars1.githubusercontent.com/u/5644283?v=2&s=64)](https://github.com/delaetthomas)
-[![vkeepe](https://avatars1.githubusercontent.com/u/7844728?v=3&u=4e52e300528e03c355995f916042782f23ea370e&s=140](https://github.com/vkeepe)
+[![vkeepe](https://avatars1.githubusercontent.com/u/7844728?v=3&u=4e52e300528e03c355995f916042782f23ea370e&s=140)](https://github.com/vkeepe)
   [1]: http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html
