@@ -11,6 +11,7 @@ brings this feature to older iOS versions, Android devices and for Windows Store
         <meta name="author" content="Google, Inc.">
         <meta name="apple-itunes-app" content="app-id=544007664">
         <meta name="google-play-app" content="app-id=com.google.android.youtube">
+        <meta name="msApplication-ID" content="app-id=a1f4073b-3b6c-4252-8117-22646ac88e58" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="jquery.smartbanner.css" type="text/css" media="screen">
@@ -54,5 +55,5 @@ brings this feature to older iOS versions, Android devices and for Windows Store
 
 [![Arnold Daniels](https://avatars3.githubusercontent.com/u/100821?v=2&s=64)](https://github.com/jasny)
 [![Thomas De Laet](https://avatars1.githubusercontent.com/u/5644283?v=2&s=64)](https://github.com/delaetthomas)
-
+[![vkeepe](https://avatars1.githubusercontent.com/u/7844728?v=3&u=4e52e300528e03c355995f916042782f23ea370e&s=140](https://github.com/vkeepe)
   [1]: http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html
