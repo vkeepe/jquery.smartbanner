@@ -9,15 +9,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="jquery.smartbanner.css" type="text/css" media="screen">
-    <meta name="msapplication-TileImage" content="http://wscont1.apps.microsoft.com/winstore/1x/c8ac8bab-d412-4981-8f31-2d163815afe4/Icon.6809.png" />
-    <!--<meta name="msApplication-TileImage" content="http://www.hulu.com/icon-win8-tile.png" />-->
+    <meta name="apple-appstore-app" content="app-id=931021960">
+    <meta name="google-play-app" content="app-id=com.keepe.keepe">
+    <meta name="msApplication-ID" content="app-id=a1f4073b-3b6c-4252-8117-22646ac88e58" />
+    <meta name="msApplication-PackageFamilyName" content="KeepeUpInc.Keepe" />
+    <meta name="msApplication-WinPhonePackageUrl" content="a1f4073b-3b6c-4252-8117-22646ac88e58" />
   </head>
   <body>
     ...
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="jquery.smartbanner.js"></script>
     <script type="text/javascript">
-        $(function () { $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Hulu' }) })
+        $(function () {
+            $.smartbanner({
+                title: 'Keepe',
+                author: 'Keepe Up, Inc',
+                price: 'FREE',
+                icon: 'https://cdn.keepe.com/assets/images/icon.png',
+                button: 'INSTALL',
+                layer: true,
+                scale: 'auto',
+                speedIn: 1000,
+                speedOut: 1000,
+                daysHidden: 1,
+                daysReminder: 1,
+                appendToSelector: 'body',
+                hideOnInstall: false,
+                iOSUniversalApp: true,
+                inWindowsStore: 'In Windows Store',
+                force: null,
+                margin: false
+            });
+        })
     </script>
   </body>
 </html>
