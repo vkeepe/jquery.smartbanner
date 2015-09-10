@@ -49,7 +49,10 @@ brings this feature to older iOS versions, Android devices and for Windows Store
       hideOnInstall: true, // Hide the banner after "VIEW" is clicked.
       iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.      
       appendToSelector: 'body' //Append the banner to a specific selector
-      margin: true // If set to false, no margin-top is added on the body.
+      margin: true, // If set to false, no margin-top is added on the body.
+      conversionId: null, //conversion id for ads
+      conversionLabel: null, //conversion label for ads
+      iTunesPT: null   //itunes PT param for campaign
     })
 
 ## Contributors

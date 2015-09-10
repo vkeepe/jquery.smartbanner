@@ -81,8 +81,11 @@
               } else if(this.type=='windows-phone') {
                   link = 'http://windowsphone.com/s?appId=' + this.appId
               }
-              else
-              link = 'https://itunes.apple.com/' + this.options.appStoreLanguage + '/app/id' + this.appId
+              else {
+                  link = 'https://itunes.apple.com/app/apple-store/id' + this.appId;
+                  if(this.options.iTunesPT)
+                      link = link + '?pt=' + this.options.iTunesPT +'&ct=smartbanner&mt=8';
+              }
             }
 
             var banner = '<div id="smartbanner" class="'+this.type+'"><div class="sb-container"><span class="sb-icon"></span><div class="sb-info"><strong>'+this.title+'</strong><span>'+this.author+'</span><span>'+inStore+'</span></div><a href="'+link+'" class="sb-button"><span>'+this.options.button+'</span></a></div></div>';
@@ -195,9 +198,20 @@
 			if (this.options.hideOnInstall) {
 				this.hide()
 			}
+			if (typeof ga !== 'undefined') {
+			    ga('send', 'event', 'button', 'click', 'SmartBanner Install', 1);
+			}
+			if (this.options.conversionId && this.options.conversionLabel) {
+			    this.trackConv(this.options.conversionId, this.options.conversionLabel);
+			}
             this.setCookie('sb-installed','true',this.options.daysReminder)
         }
-
+      
+      , trackConv: function(google_conversion_id, google_conversion_label) {
+          var image = new Image(1,1);
+          image.src = "//www.googleadservices.com/pagead/conversion/"+google_conversion_id+"/?label="+google_conversion_label +"&script=0";
+      }
+      
       , setCookie: function(name, value, exdays) {
             var exdate = new Date()
             exdate.setDate(exdate.getDate()+exdays)
