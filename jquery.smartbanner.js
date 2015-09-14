@@ -75,7 +75,7 @@
               link = this.options.url
             else {
               if(this.type=='android') {
-                link = 'market://details?id=' + this.appId
+                link = 'https://play.google.com/store/apps/details?id=' + this.appId
                 if(this.options.GooglePlayParams)
                   link = link + '&referrer=' + this.options.GooglePlayParams
               } else if(this.type=='windows-phone') {
@@ -84,7 +84,7 @@
               else {
                   link = 'https://itunes.apple.com/app/apple-store/id' + this.appId;
                   if(this.options.iTunesPT)
-                      link = link + '?pt=' + this.options.iTunesPT +'&ct=smartbanner&mt=8';
+                      link = link + '?pt=' + this.options.iTunesPT +'&ct=' + this.options.iTunesPTParams + '&mt=8';
               }
             }
 
